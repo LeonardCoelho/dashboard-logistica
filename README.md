@@ -1,51 +1,44 @@
-# 📦 Dashboard Logístico
+# 📦 Dashboard de Eficiência de Transportes
 
-Este projeto apresenta um **dashboard completo de performance logística**, construído com **Power BI**, utilizando **dados totalmente sintéticos** para simular um cenário real de operação.
+> Versão com **dados sintéticos** de um painel que desenvolvi e que foi usado nas apresentações de performance para a **gerência e os gestores da operação de transportes**.
 
-O objetivo é demonstrar **domínio em análise de dados, visualização, lógica de indicadores e storytelling analítico** aplicado ao contexto de logística e supply chain.
+![Dashboard Logístico](images/demonstração.gif)
 
 ---
 
-## 🚛 Objetivo do Projeto
+## 🎯 Perguntas que o painel responde
 
-Criar um painel que responda a perguntas-chave da operação logística, como:
-
-- Quais são as transportadoras responsáveis pela maior parte do volume?
-- Como está o frete distribuído por fornecedor?
-- Quais tipos de veículos mais carregam?
-- Há sazonalidade ou tendência nos carregamentos mensais?
-- Como está a pontualidade?
-- Quais os principais destinos?
-
-Tudo isso usando uma base **fictícia**, mas estruturada de forma fiel a uma operação real.
+- 🕒 **Pontualidade:** as transportadoras chegam no horário agendado para carregamento?
+- 🚛 **Volume por perfil de veículo:** quais tipos de veículo mais carregam?
+- 🏭 **Volume por CD e por transportadora:** onde está concentrada a operação (Pareto 80/20)?
+- 💰 **Custo de frete por transportadora:** quem mais pesa no custo e como isso evolui no tempo?
 
 ---
 
 ## 🧱 Estrutura do Projeto
 
-📁 dashboard-logistica-cargas/
-│
-├── 📁 data/
-│ ├── dados_sinteticos_cargas.xlsx # Base artificial usada no dashboard
-│
-├── 📁 powerbi/
-│ ├── dashboard_logistica.pbix # Arquivo do Power BI
-│
-├── 📁 img/
-│ ├── preview_dashboard.png # Screenshot do painel
-│
+```
+dashboard-logistica/
+├── data/
+│   └── base de dados.xlsx        # Base sintética (~11 mil ordens de coleta)
+├── images/
+│   ├── dashboard.jpg             # Screenshot do painel
+│   └── demonstração.gif          # Demonstração navegando no painel
+├── src/
+│   └── Dashboard_Logístico.pbix  # Arquivo do Power BI
 └── README.md
+```
 
 ---
 
 ## 📊 Destaques do Dashboard
 
-- **Pareto 80/20 de Volume por Transportadora**
-- **Pareto 80/20 de Frete por Transportadora**
-- **Distribuição de Carregamentos por Tipo de Veículo**
+- **Pareto 80/20 de volume e de frete por transportadora**
+- **Pontualidade na chegada ao CD** (no prazo × atrasado)
+- **Distribuição de carregamentos por perfil de veículo**
+- **Volume por CD de origem**
 - **Tendência mensal de carregamentos**
-- **Mapa interativo com principais destinos**
-- **KPI de pontualidade**
+- **Mapa interativo com os principais destinos**
 
 ---
 
@@ -78,7 +71,7 @@ Os dados foram criados utilizando Python, com:
 
 ## ▶️ Como Reproduzir
 
-1. Baixe o arquivo `.pbix` na pasta `powerbi/`.
+1. Baixe o arquivo `.pbix` na pasta `src/`.
 2. Abra no Power BI Desktop.
 3. Os dados sintéticos estão na pasta `data/`.
 4. Você pode editar o modelo, trocar parâmetros ou gerar novos dados.
@@ -100,12 +93,6 @@ Os dados foram criados utilizando Python, com:
 - Visualizações simples (Pareto, linha, barra e gauge) contam histórias poderosas.
 - A criação de dados sintéticos é essencial para portfólios profissionais na área.
 - Power BI + Python formam um combo forte para projetos de supply chain.
-
----
-
-## 📸 Preview
-
-![Dashboard Logístico](images/demonstração.gif)
 
 ---
 
